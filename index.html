@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tela de Login</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="col-a">
+        <header>
+          <div class="logo">
+            <img src="./assets/logo.svg" alt="Logo do site" />
+          </div>
+        </header>
+
+        <main>
+          <div class="top">
+            <h1>Acesse a plataforma</h1>
+            <p>
+              Faça login ou registre-se para começar a construir seus projetos
+              ainda hoje.
+            </p>
+          </div>
+
+          <form method="post">
+            <div class="email-wrapper">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class=""
+                placeholder="Digite seu e-mail"
+              />
+              <p class="invalid-email">Digite um e-mail válido</p>
+            </div>
+
+            <div class="password-wrapper">
+              <div class="container">
+                <label for="password">Senha</label>
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+              </div>
+
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Digite sua senha"
+                  maxlength="12"
+                />
+                <button class="showHidePasswordBtn">
+                  <img src="./assets/eye-off.svg" alt="Botão que indica que a senha está oculta" />
+                </button>
+              </div>
+            </div>
+
+            <button class="btn" disabled>Entrar</button>
+            <p class="sign-up">
+              Ainda não tem uma conta?
+              <a href="#">Inscreva-se</a>
+            </p>
+          </form>
+        </main>
+      </div>
+      <div class="col-b"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

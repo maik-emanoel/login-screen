@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --title-font-color: #1E293B;
+    --parag-font-color: #475569;
+    --primary-color: #7C3AED;
+    --placeholder-font-color: #94A3B8;
+    --error-message-color: #ED3A5A;
+    --input-bg-color: #ffffff;
+    --input-border-color: #E2E8F0;
+    --bg-color: #F8FAFC;
+
+    font-size: 62.5%;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+
+    background: var(--bg-color);
+}
+
+a,
+input,
+button {
+    all: unset;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 51%;
+}
+
+.col-a {
+    margin-left: 11.2rem;
+}
+
+header {
+    padding: 4rem 0 11.4rem;
+}
+
+main {
+    max-width: 38.4rem;
+    padding-bottom: 20rem;
+}
+
+.top {
+    margin-bottom: 4rem;
+}
+
+.top h1 {
+    font-size: 3.6rem;
+    line-height: 5.5rem;
+    color: var(--title-font-color);
+
+    margin-bottom: 1.6rem;
+}
+
+.top p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--parag-font-color);
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--title-font-color);
+    margin-bottom: .8rem;
+    display: block;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 38.4rem;
+    max-height: 5.3rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--title-font-color);
+
+    box-sizing: border-box;
+    padding: 1.6rem 1.2rem;
+    border-radius: .4rem;
+    background: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+}
+
+input:hover,
+input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+input::placeholder {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--placeholder-font-color);
+}
+
+#email.invalid-email {
+    border: 1px solid var(--error-message-color);
+}
+
+p.invalid-email {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--error-message-color);
+    padding-top: .4rem;
+
+    display: none;
+}
+
+.email-wrapper {
+    margin-bottom: 1.6rem;
+}
+
+.password-wrapper .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+
+.container label {
+    margin: 0;
+}
+
+.forgot-password {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--primary-color);
+
+    cursor: pointer;
+}
+
+.password-input-wrapper {
+    position: relative;
+    margin-bottom: 3.2rem;
+}
+
+.showHidePasswordBtn {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    height: 2.1rem;
+
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    height: 5.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    color: #ffffff;
+
+    border-radius: .4rem;
+    background: var(--primary-color);
+
+    margin-bottom: 3.2rem;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+}
+
+.btn:disabled {
+    opacity: .8;
+    cursor: not-allowed;
+}
+
+.sign-up {
+    line-height: 2.4rem;
+    color: var(--parag-font-color);
+}
+
+.sign-up a {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.forgot-password:hover,
+.sign-up a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.col-b {
+    width: 100%;
+    min-height: 100vh;
+    background: url(./assets/bg-col-b.jpg) no-repeat center/cover;
+}
+
+@media (min-width: 1600px) {
+    main {
+        max-width: none;
+        width: 65%;
+    }
+
+    input {
+        max-width: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    #app {
+        display: initial;
+    }
+
+    .col-b {
+        display: none;
+    }
+
+    main {
+        max-width: none;
+        width: 75%;
+        background: #ffffffe8;
+        padding: 6rem 4rem 8rem;
+        border-radius: .8rem;
+
+        box-shadow: 3px 4px 26px 0px #00000040;;
+    }
+
+    input {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 50%;
+    }
+
+    .col-a {
+        margin-left: 0;
+    }
+
+    header {
+        width: 85%;
+        margin-inline: auto;
+    }
+
+    main {
+        width: 85%;
+        margin-inline: auto;
+        padding: 6rem 3rem 8rem;
+    }
+
+    .top h1 {
+        line-height: 3.8rem;
+    }
+}
