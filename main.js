@@ -5,6 +5,7 @@ const invalidEmailmessage = document.querySelector('p.invalid-email')
 const passwordInput = document.querySelector('#password')
 const showHidePasswordBtn = document.querySelector('.showHidePasswordBtn')
 const passwordImage = showHidePasswordBtn.querySelector('img')
+const successfulMessage = document.querySelector('#successful')
 
 allButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
@@ -81,3 +82,11 @@ passwordInput.addEventListener('input', () => {
     }
 })
 
+formBtn.addEventListener('click', addSuccessfulMessage)
+function addSuccessfulMessage() {
+    successfulMessage.style.display = 'initial'
+
+    setTimeout(() => {
+        successfulMessage.style.display = 'none'
+    }, 3000)
+}
