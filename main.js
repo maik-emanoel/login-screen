@@ -27,6 +27,18 @@ emailInput.addEventListener('blur', () => {
             formBtn.removeAttribute('disabled')
         }
     }
+
+    if(emailInput.value == '') {
+        invalidEmailmessage.style.display = 'none'
+        emailInput.classList.remove('invalid-email')
+    }
+})
+
+emailInput.addEventListener('input', () => {
+    if(emailInput.value == '') {
+        invalidEmailmessage.style.display = 'none'
+        emailInput.classList.remove('invalid-email')
+    }
 })
 
 function validEmail(email) {
