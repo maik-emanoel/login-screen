@@ -41,6 +41,7 @@ button {
 
 .col-a {
     margin-left: 11.2rem;
+    animation: fromRight .7s backwards;
 }
 
 header {
@@ -247,10 +248,23 @@ p.invalid-email {
     }
 }
 
+@keyframes fromRight {
+    from {
+        transform: translateX(-1rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .col-b {
     width: 100%;
     min-height: 100vh;
     background: url(./assets/bg-col-b.jpg) no-repeat center/cover;
+
+    animation: fromRight .7s .2s backwards;
 }
 
 @media (min-width: 1600px) {
