@@ -26,6 +26,7 @@ body {
     font-size: 1.6rem;
 
     background: var(--bg-color);
+    overflow: overlay;
 }
 
 a,
@@ -41,7 +42,7 @@ button {
 
 .col-a {
     margin-left: 11.2rem;
-    animation: fromRight .7s backwards;
+    animation: fromRight 1s backwards;
 }
 
 header {
@@ -264,8 +265,21 @@ p.invalid-email {
     min-height: 100vh;
     background: url(./assets/bg-col-b.jpg) no-repeat center/cover;
 
-    animation: fromRight .7s .2s backwards;
+    animation: fromRight .7s .3s backwards;
 }
+
+body::-webkit-scrollbar{
+    width: .6rem;
+  }
+  
+  body::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+    border-radius: .6rem;
+  }
 
 @media (min-width: 1600px) {
     main {
